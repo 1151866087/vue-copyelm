@@ -3,12 +3,14 @@
     <p>hello world</p>
     <button @click="handleClick">detail</button>
     <!-- 4.使用组件 -->
+    <navtab :cur="0"></navtab>
   </div>
 </template>
 
 <script>
 /* 2.引入组件 */
 import axios from "axios-jsonp-pro"
+import Navtab from "../components/navtab"
 export default {
   name: "Home",
   methods: {
@@ -20,7 +22,7 @@ export default {
   },
   /* 3.注册组件 */
   components:{
-    // HeadHome
+    Navtab
   },
   created(){
     var url = "https://mybeautybox.widiazine.cn/app/arvato_shop_api.php?i=4";
@@ -38,7 +40,8 @@ export default {
 // scoped自动隔离
 .home{
   text-align: center;
-  color: red
+  color: red;
+  font-size: 30px;
 }
 </style>
 

@@ -1,15 +1,18 @@
 <template>
-    <div class="about">
-        About  dddd
-    </div>
+  <div class="about">
+    <navtab :cur="1"></navtab>
+  </div>
 </template>
 <script>
-    export default {
-        name:"About",
-    }
-    console.log(222)
+import Navtab from "../components/navtab";
+export default {
+  name: "About",
+  components: {
+      Navtab
+  }
+};
+console.log(222);
 </script>
 
 <style lang="scss" scoped>
-
 </style>
